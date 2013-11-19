@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>Product Enquiry</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="js/main.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <h2>Product Enquiry</h2>
+
+        <form action="./" method="POST" id="product_enquiry_form">
+            <fieldset>
+                <dl class="form">
+                    <dt>
+                        <label for="first_name">First name</label><span class="required">*</span>
+                    </dt>
+                    <dd>
+                        <input type="text" name="first_name" id="first_name" maxlength="30" required>
+                    </dd>
+                    <dt>
+                        <label for="last_name">Last name</label><span class="required">*</span>
+                    </dt>
+                    <dd>
+                        <input type="text" name="last_name" id="last_name" maxlength="30" required>
+                    </dd>
+                    <dt>
+                        <label for="email">Email Address</label><span class="required">*</span>
+                    </dt>
+                    <dd>
+                        <input type="email" name="email" id="email" maxlength="50" required>
+                    </dd>
+
+                    <dt>
+                        <label for="contact_no">Daytime contact number</label><span class="required">*</span>
+                    </dt>
+                    <dd>
+                        <input type="text" name="contact_no" id="contact_no" class="mid" maxlength="15" required>
+                    </dd>
+                </dl>
+            </fieldset>
+            <fieldset>
+                <dl class="form">
+                    <dt>
+                        <label for="address_line_1">Address</label><span class="required">*</span>
+                    </dt>
+                    <dd>
+                        <input type="text" name="address_line_1" id="address_line_1" required>
+                    </dd>
+                    <dt>
+                        <label for="suburb">Suburb</label><span class="required">*</span>
+                    </dt>
+                    <dd>
+                        <input type="text" name="suburb" id="suburb" required>
+                    </dd>
+                    <dt>
+                        <label for="state">State</label><span class="required">*</span>
+                    </dt>
+                    <dd>
+                        <select name="state" id="state" required>
+                            <option value="">-- Please Select ---</option>
+                            <option value="ACT">ACT</option>
+                            <option value="NSW">NSW</option>
+                            <option value="NT">NT</option>
+                            <option value="QLD">QLD</option>
+                            <option value="SA">SA</option>
+                            <option value="TAS">TAS</option>
+                            <option value="VIC">VIC</option>
+                            <option value="WA">WA</option>
+                        </select>
+                    </dd>
+                    <dt>
+                        <label for="postcode">Postcode</label><span class="required">*</span>
+                    </dt>
+                    <dd>
+                        <input type="text" name="postcode" id="postcode" class="narrow" maxlength="4" required>
+                    </dd>
+                </dl>
+            </fieldset>
+            <fieldset>
+                <dl class="form">
+                    <dt>
+                        <label for="enquiry_type">Enquiry type</label><span class="required">*</span>
+                    </dt>
+                    <dd>
+                        <select name="enquiry_type" id="enquiry_type" required>
+                            <option value="">-- Please Select ---</option>
+                            <option value="general">General enquiry</option>
+                            <option value="product_feedback">Product feedback or enquiry</option>
+                            <option value="product_complaint">Product complaint</option>
+                        </select>
+                    </dd>
+                    <dt>
+                        <label for="product_name">Product name</label><span id="product_name_required" class="required" style="display: none">*</span>
+                    </dt>
+                    <dd>
+                        <input type="text" name="product_name" id="product_name" maxlength="40">
+                    </dd>
+                    <dt>
+                        <label for="product_size">Product size</label><span id="product_size_required" class="required" style="display: none">*</span>
+                    </dt>
+                    <dd>
+                        <input type="text" name="product_size" id="product_size" maxlength="20">
+                    </dd>
+                    <dt>
+                        <label for="product_expiry">Use-by date</label><span id="product_expiry_required" class="required" style="display: none">*</span>
+                    </dt>
+                    <dd>
+                        <input type="text" name="product_expiry" id="product_expiry" class="narrow" maxlength="8" placeholder="dd/mm/yy">
+                    </dd>
+                    <dt>
+                        <label for="product_code">Batch code</label><span id="product_code_required" class="required" style="display: none">*</span> 
+                    </dt>
+                    <dd>
+                        <input type="text" name="product_code" id="product_code" class="mid" maxlength="8">
+                    </dd>
+                    <dt class="separator">&nbsp;</dt>
+                    <dd class="separator">&nbsp;</dd>
+                    <dt>
+                        <label for="enquiry">Enquiry</label>
+                    </dt>
+                    <dd>
+                        <textarea name="enquiry" id="enquiry" rows="6"></textarea>
+                    </dd>
+                </dl> 
+                <dl class="form submit">
+                    <dt>&nbsp;</dt>
+                    <dd>
+                        <input type="submit" value="Submit" class="button">
+                    </dd>
+                </dl>
+            </fieldset>
+        </form> 
+         
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
